@@ -37,6 +37,8 @@ a:hover {
   padding: 10px;
   position: fixed;
   text-align: center;
+  top: 0px;
+  z-index: 1000000;
 }
 
 .nav {
@@ -70,7 +72,7 @@ a:hover {
 
 header {
   text-align: center;
-  background: url('images/universe.jpg') no-repeat top center ;
+  background: url('images/universe.jpg') no-repeat top center;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -90,9 +92,6 @@ header .profile-image {
   transition: all .5s;
 }
 
-header .profile-image:hover {
-  transform: scale(2.4) rotate(360deg);
-}
 
 .tag {
   background-color: #efefef;
@@ -102,13 +101,15 @@ header .profile-image:hover {
   display: table;
   margin: 10px auto;
 }
+
 .location {
   background-color: #222;
   color: yellow;
 }
 
+
 .card {
-  margin-top: 70px;
+  margin: 70px auto;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: center;
@@ -116,6 +117,7 @@ header .profile-image:hover {
   border-bottom: 4px solid #fff;
   border-radius: 6px;
   transition: all .5s;
+  line-height: 1.5em;
 }
 
 .card:hover {
@@ -126,7 +128,14 @@ header .profile-image:hover {
 }
 
 
-.card img {width:240px; height:260px; border-radius: 5px 40px 5px; border: black;-webkit-transform: rotateY(60deg);}
+/*.card img {
+  width:240px; 
+  height:260px; 
+  border-radius: 5px 40px 5px; 
+  border: black;
+  -webkit-transform: rotateY(60deg);
+}*/
+
 ul.skills {
   padding: 0;
   text-align: center;
@@ -156,13 +165,13 @@ ul.skills {
 footer {
   width: 100%;
   min-height: 30px;
-  padding: 20px 0 40px 20px;
+  padding: 20px 0 40px 0px;
 }
 
 
 footer .copyright {
   top: -8px;
-  font-size: .75em;
+  font-size: 1em;
 }
 
 
@@ -181,7 +190,7 @@ footer ul li {
 a.social {
   display: inline-block;
   text-indent: -9999px;
-  margin-left: 5px;
+  margin-left: 15px;
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
@@ -212,7 +221,7 @@ a.social:hover {
 
 /* Styles for larger screens */
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 769px) {
   
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -224,33 +233,39 @@ a.social:hover {
   }
 
 
-header {
-    min-height: 470px;
+  header {
+      min-height: 470px;
+    }
+
+    header .profile-image:hover {
+    transform: scale(1.4) rotate(360deg);
   }
 
 
-.nav {
-    max-width: 1200px;
-    padding: 0 30px;
+  .nav {
+      max-width: 1200px;
+      padding: 0 30px;
+    }
+
+    .card {
+      margin: 70px auto;
+    }
+
+  /*main {
+      padding-top: 20px;
+    }
+
+    
+  main p {
+      line-height: 1.6em;
+      font-size: 1.2em;
+    }
+  */
+    
+  footer {
+      font-size: 1.3em;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+
   }
-
-
-
-main {
-    padding-top: 20px;
-  }
-
-  
-main p {
-    line-height: 1.6em;
-    font-size: 1.2em;
-  }
-
-  
-footer {
-    font-size: 1.3em;
-    max-width: 1200px;
-    margin: 40px auto;
-  }
-
-}
